@@ -1,101 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Intel: Sustainability Through the Ages</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intel Sustainability Timeline</title>
+  <title>Intel Sustainability International</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Hero Section -->
-  <header class="hero">
-    <!-- Intel logo -->
-    <img src="img/intel-header-logo.svg" alt="Intel Logo" class="intel-logo">
-    <!-- Main heading -->
-    <h1>SUSTAINABILITY THROUGH THE AGES</h1>
-    <!-- Subheading -->
-    <p class="subheading">Explore Intel's journey through time, discovering how our commitment to innovation has shaped a more sustainable future for technology and our planet.</p>
+  <!-- Language Selector -->
+  <nav class="navbar navbar-light bg-light justify-content-end" aria-label="Language selector">
+    <form class="d-flex align-items-center me-3" role="group" aria-label="Language selection">
+      <label for="langSelect" class="me-2 mb-0">Language:</label>
+      <select id="langSelect" class="form-select form-select-sm" aria-label="Select language">
+        <option value="en" selected>English</option>
+        <option value="ar">العربية</option>
+      </select>
+    </form>
+  </nav>
+
+
+  <!-- Header -->
+  <header class="container text-center my-4">
+    <img src="img/intel-header-logo.svg" alt="Intel Logo" class="intel-logo mb-2" style="max-width: 120px;">
+    <h1 id="mainHeading" class="display-5">SUSTAINABILITY INTERNATIONAL</h1>
   </header>
 
-  <!-- Timeline Section -->
+  <!-- Timeline Section (multilingual) -->
   <section class="timeline-section">
-    <div class="timeline-container">
-      <!-- Timeline Card 1 -->
-      <div class="timeline-card">
-        <div class="timeline-year">1990</div>
-        <div class="timeline-title">First Green Initiative</div>
-        <img src="img/1.jpg" alt="Green Initiative" class="timeline-img">
-        <div class="timeline-info">Intel launches its first company-wide recycling program.</div>
-      </div>
-      <!-- Timeline Card 2 -->
-      <div class="timeline-card">
-        <div class="timeline-year">2005</div>
-        <div class="timeline-title">Energy Efficient Chips</div>
-        <img src="img/2.jpg" alt="Energy Efficient Chips" class="timeline-img">
-        <div class="timeline-info">Introduction of energy-saving processors for PCs and servers.</div>
-      </div>
-      <!-- Timeline Card 3 -->
-      <div class="timeline-card">
-        <div class="timeline-year">2015</div>
-        <div class="timeline-title">Water Conservation</div>
-        <img src="img/3.jpg" alt="Water Conservation" class="timeline-img">
-        <div class="timeline-info">Major investments in water recycling at manufacturing sites.</div>
-      </div>
-      <!-- Timeline Card 4 (Detailed, now visually aligned) -->
-      <div class="timeline-card detailed">
-        <div class="timeline-year">2025</div>
-        <div class="timeline-title">Net Positive Water</div>
-        <img src="img/4.jpg" alt="Net Positive Water" class="timeline-img small">
-        <div class="timeline-info">
-          <p>Intel achieves net positive water use, returning more water to communities than it consumes. This milestone is a result of decades of innovation and investment in sustainable manufacturing processes, benefiting both technology and the environment.</p>
-        </div>
-      </div>
-      <!-- Timeline Card 5 -->
-      <div class="timeline-card">
-        <div class="timeline-year">2027</div>
-        <div class="timeline-title">AI for Sustainability</div>
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="AI for Sustainability" class="timeline-img">
-        <div class="timeline-info">Intel leverages AI to optimize energy use in data centers, reducing carbon footprint.</div>
-      </div>
-      <!-- Timeline Card 6 -->
-      <div class="timeline-card">
-        <div class="timeline-year">2030</div>
-        <div class="timeline-title">Circular Economy</div>
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Circular Economy" class="timeline-img">
-        <div class="timeline-info">Major advances in recycling and reusing chip materials, supporting a circular tech economy.</div>
-      </div>
-      <!-- Timeline Card 7 -->
-      <div class="timeline-card">
-        <div class="timeline-year">2035</div>
-        <div class="timeline-title">Zero Waste Factories</div>
-        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Zero Waste Factories" class="timeline-img">
-        <div class="timeline-info">Intel factories achieve zero waste to landfill, setting a new industry standard.</div>
-      </div>
-      <!-- Timeline Card 8 -->
-      <div class="timeline-card detailed">
-        <div class="timeline-year">2040</div>
-        <div class="timeline-title">Global Green Leadership</div>
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Global Green Leadership" class="timeline-img small">
-        <div class="timeline-info">
-          <p>Intel is recognized as a global leader in green technology, with all operations powered by renewable energy and a positive impact on communities worldwide.</p>
-        </div>
-      </div>
+    <div class="timeline-container d-flex flex-row flex-nowrap overflow-auto py-3" id="timelineContainer">
+      <!-- Timeline events will be injected here by JS -->
     </div>
-    <!-- Roadmap line and dots below the cards -->
-    <div class="roadmap">
-      <div class="roadmap-line"></div>
-      <div class="roadmap-dot"></div>
-      <div class="roadmap-dot"></div>
-      <div class="roadmap-dot"></div>
-      <div class="roadmap-dot active"></div>
-    </div>
+  </section>
+
+  <!-- New Content: Three Columns and Form -->
+  <main class="container mb-5">
+    <section class="row text-center" aria-label="Sustainability pillars">
+      <div class="col-md-4 mb-4">
+        <img src="img/1.jpg" alt="RISE Strategy icon" class="rounded-circle mb-2" style="width: 80px; height: 80px; object-fit: cover;">
+        <h2 id="col1Title" class="h5">RISE Strategy</h2>
+        <p id="col1Desc">Empowering innovation and responsibility for a sustainable future.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="img/2.jpg" alt="Commitment icon" class="rounded-circle mb-2" style="width: 80px; height: 80px; object-fit: cover;">
+        <h2 id="col2Title" class="h5">Commitment</h2>
+        <p id="col2Desc">Intel is dedicated to global sustainability and positive impact.</p>
+      </div>
+      <div class="col-md-4 mb-4">
+        <img src="img/3.jpg" alt="Water and Waste icon" class="rounded-circle mb-2" style="width: 80px; height: 80px; object-fit: cover;">
+        <h2 id="col3Title" class="h5">Water and Waste</h2>
+        <p id="col3Desc">Reducing water use and waste for a cleaner planet.</p>
+      </div>
+    </section>
+
+    <!-- Accessible Subscription Form -->
+    <section class="row justify-content-center" aria-label="Newsletter subscription">
+      <div class="col-md-6">
+        <form class="p-4 border rounded bg-light" aria-label="Sustainability newsletter subscription form">
+          <h2 id="formHeading" class="h4 mb-3">Subscribe to our Sustainability Newsletter</h2>
+          <div class="mb-3">
+            <label for="email" class="form-label" id="emailLabel">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" aria-required="true" required placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label" id="nameLabel">Name (optional)</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Your name">
+          </div>
+          <button type="submit" class="btn btn-primary w-100" id="subscribeBtn" aria-label="Subscribe to newsletter">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-3 bg-light mt-auto">
+    <p>&copy; 2025 Intel Corporation</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Multilingual and RTL/LTR Script -->
+  <script>
+    // Multilingual content for timeline and new sections
+    const content = {
+      en: {
+        heading: "SUSTAINABILITY INTERNATIONAL",
+        timeline: [
+          { year: "1990", title: "First Green Initiative", img: "img/1.jpg", desc: "Intel launches its first company-wide recycling program." },
+          { year: "2005", title: "Energy Efficient Chips", img: "img/2.jpg", desc: "Introduction of energy-saving processors for PCs and servers." },
+          { year: "2015", title: "Water Conservation", img: "img/3.jpg", desc: "Major investments in water recycling at manufacturing sites." },
+          { year: "2025", title: "Net Positive Water", img: "img/4.jpg", desc: "Intel achieves net positive water use, returning more water to communities than it consumes." },
+          { year: "2027", title: "AI for Sustainability", img: "img/1.jpg", desc: "Intel leverages AI to optimize energy use in data centers, reducing carbon footprint." },
+          { year: "2030", title: "Circular Economy", img: "img/2.jpg", desc: "Major advances in recycling and reusing chip materials, supporting a circular tech economy." },
+          { year: "2035", title: "Zero Waste Factories", img: "img/3.jpg", desc: "Intel factories achieve zero waste to landfill, setting a new industry standard." },
+          { year: "2040", title: "Global Green Leadership", img: "img/4.jpg", desc: "Intel is recognized as a global leader in green technology, with all operations powered by renewable energy." }
+        ],
+        col1: { title: "RISE Strategy", desc: "Empowering innovation and responsibility for a sustainable future." },
+        col2: { title: "Commitment", desc: "Intel is dedicated to global sustainability and positive impact." },
+        col3: { title: "Water and Waste", desc: "Reducing water use and waste for a cleaner planet." },
+        formHeading: "Subscribe to our Sustainability Newsletter",
+        emailLabel: "Email address",
+        nameLabel: "Name (optional)",
+        subscribeBtn: "Subscribe"
+      },
+      ar: {
+        heading: "الاستدامة عبر العصور",
+        timeline: [
+          { year: "1990", title: "أول مبادرة خضراء", img: "img/1.jpg", desc: "تطلق إنتل أول برنامج لإعادة التدوير على مستوى الشركة." },
+          { year: "2005", title: "رقائق موفرة للطاقة", img: "img/2.jpg", desc: "تقديم معالجات موفرة للطاقة لأجهزة الكمبيوتر والخوادم." },
+          { year: "2015", title: "الحفاظ على المياه", img: "img/3.jpg", desc: "استثمارات كبيرة في إعادة تدوير المياه في مواقع التصنيع." },
+          { year: "2025", title: "استخدام إيجابي للمياه", img: "img/4.jpg", desc: "تحقق إنتل استخدامًا إيجابيًا للمياه، وتعيد للمجتمعات أكثر مما تستهلك." },
+          { year: "2027", title: "الذكاء الاصطناعي للاستدامة", img: "img/1.jpg", desc: "تستخدم إنتل الذكاء الاصطناعي لتحسين استخدام الطاقة في مراكز البيانات." },
+          { year: "2030", title: "اقتصاد دائري", img: "img/2.jpg", desc: "تقدم كبير في إعادة تدوير وإعادة استخدام مواد الرقائق لدعم الاقتصاد الدائري." },
+          { year: "2035", title: "مصانع بلا نفايات", img: "img/3.jpg", desc: "تحقق مصانع إنتل صفر نفايات إلى مكب النفايات." },
+          { year: "2040", title: "الريادة الخضراء العالمية", img: "img/4.jpg", desc: "تُعترف إنتل كقائد عالمي في التكنولوجيا الخضراء." }
+        ],
+        col1: { title: "استراتيجية RISE", desc: "تمكين الابتكار والمسؤولية من أجل مستقبل مستدام." },
+        col2: { title: "الالتزام", desc: "تلتزم إنتل بالاستدامة العالمية والتأثير الإيجابي." },
+        col3: { title: "المياه والنفايات", desc: "تقليل استخدام المياه والنفايات من أجل كوكب أنظف." },
+        formHeading: "اشترك في نشرتنا الإخبارية للاستدامة",
+        emailLabel: "البريد الإلكتروني",
+        nameLabel: "الاسم (اختياري)",
+        subscribeBtn: "اشترك"
+      }
+    };
+
+    // Render timeline events
+    function renderTimeline(lang) {
+      const container = document.getElementById('timelineContainer');
+      container.innerHTML = '';
+      content[lang].timeline.forEach(event => {
+        const card = document.createElement('div');
+        card.className = 'timeline-card p-3 m-2 bg-light rounded shadow-sm text-center';
+        card.style.minWidth = '220px';
+        card.innerHTML = `
+          <div class="timeline-year fw-bold mb-1">${event.year}</div>
+          <div class="timeline-title h6 mb-2">${event.title}</div>
+          <img src="${event.img}" alt="" class="timeline-img mb-2" style="width:90px;height:60px;object-fit:cover;border-radius:8px;">
+          <div class="timeline-info small">${event.desc}</div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Language switching logic
+    const langSelect = document.getElementById('langSelect');
+    function updateLanguage(lang) {
+      document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      document.documentElement.lang = lang;
+      document.getElementById('mainHeading').textContent = content[lang].heading;
+      // Timeline
+      renderTimeline(lang);
+      // Three columns
+      document.getElementById('col1Title').textContent = content[lang].col1.title;
+      document.getElementById('col1Desc').textContent = content[lang].col1.desc;
+      document.getElementById('col2Title').textContent = content[lang].col2.title;
+      document.getElementById('col2Desc').textContent = content[lang].col2.desc;
+      document.getElementById('col3Title').textContent = content[lang].col3.title;
+      document.getElementById('col3Desc').textContent = content[lang].col3.desc;
+      // Form
+      document.getElementById('formHeading').textContent = content[lang].formHeading;
+      document.getElementById('emailLabel').textContent = content[lang].emailLabel;
+      document.getElementById('nameLabel').textContent = content[lang].nameLabel;
+      document.getElementById('subscribeBtn').textContent = content[lang].subscribeBtn;
+      document.getElementById('email').placeholder = lang === 'ar' ? 'you@example.com' : 'you@example.com';
+      document.getElementById('name').placeholder = lang === 'ar' ? 'اسمك' : 'Your name';
+    }
+    langSelect.addEventListener('change', function() {
+      updateLanguage(this.value);
+    });
+    // Initialize
+    updateLanguage('en');
+  </script>
+</body>
+</html>
 
